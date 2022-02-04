@@ -34,7 +34,7 @@ interface RouteInterface extends RouteObjectInterface
      *
      * @return mixed
      */
-    public function getDefault($name);
+    public function getDefault(string $name);
 
     /**
      * Sets a default value.
@@ -44,7 +44,7 @@ interface RouteInterface extends RouteObjectInterface
      *
      * @return RouteInterface
      */
-    public function setDefault($name, $default);
+    public function setDefault(string $name, string $default);
 
     /**
      * Returns the defaults.
@@ -59,7 +59,7 @@ interface RouteInterface extends RouteObjectInterface
      * @param string $defaultLocale
      * @param array $requirements
      */
-    public function addLocale($defaultLocale, array $requirements);
+    public function addLocale(string $defaultLocale, array $requirements);
 
     /**
      * Get name.
@@ -68,7 +68,7 @@ interface RouteInterface extends RouteObjectInterface
      *
      * @return RouteInterface
      */
-    public function setName($name);
+    public function setName(string $name);
 
     /**
      * Get name.
@@ -109,7 +109,7 @@ interface RouteInterface extends RouteObjectInterface
      *
      * @return string|null
      */
-    public function getRequirement($key);
+    public function getRequirement(string $key);
 
     /**
      * Checks if a requirement is set for the given key.
@@ -118,7 +118,7 @@ interface RouteInterface extends RouteObjectInterface
      *
      * @return bool
      */
-    public function hasRequirement($key);
+    public function hasRequirement(string $key);
 
     /**
      * Sets a requirement for the given key.
@@ -128,7 +128,7 @@ interface RouteInterface extends RouteObjectInterface
      *
      * @return RouteInterface
      */
-    public function setRequirement($key, $regex);
+    public function setRequirement(string $key, string $regex);
 
     /**
      * Set routePattern.
@@ -137,7 +137,7 @@ interface RouteInterface extends RouteObjectInterface
      *
      * @return RouteInterface
      */
-    public function setRoutePattern($routePattern);
+    public function setRoutePattern(string $routePattern);
 
     /**
      * Get routePattern.
@@ -160,7 +160,7 @@ interface RouteInterface extends RouteObjectInterface
      *
      * @return RouteInterface
      */
-    public function setPath($pattern);
+    public function setPath(string $pattern);
 
     /**
      * Set prefix.
@@ -169,7 +169,7 @@ interface RouteInterface extends RouteObjectInterface
      *
      * @return RouteInterface
      */
-    public function setPrefix($prefix);
+    public function setPrefix(string $prefix);
 
     /**
      * Get prefix.
@@ -185,7 +185,7 @@ interface RouteInterface extends RouteObjectInterface
      *
      * @return RouteInterface
      */
-    public function setVisible($visible);
+    public function setVisible(bool $visible);
 
     /**
      * Check if is visible.
